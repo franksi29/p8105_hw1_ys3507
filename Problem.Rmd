@@ -69,6 +69,8 @@ ggplot(data = penguins,
        aes(x = flipper_length_mm,
            y = bill_length_mm)) + 
   geom_point()
+ggsave("scatterplot.pdf")
+
 ggplot(data = penguins,
        aes(x = flipper_length_mm,
            y = bill_length_mm)) + 

@@ -173,6 +173,14 @@ ggplot(data = penguins,
 ![](Problem_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ``` r
+ggsave("scatterplot.pdf")
+```
+
+    ## Saving 7 x 5 in image
+
+    ## Warning: Removed 2 rows containing missing values (geom_point).
+
+``` r
 ggplot(data = penguins,
        aes(x = flipper_length_mm,
            y = bill_length_mm)) + 
