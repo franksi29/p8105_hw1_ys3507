@@ -40,3 +40,12 @@ mean(col_4)
 
 ```
 Based on the results, the numeric and logical variables work and others don't work for calculating mean.
+
+###1.2
+
+```{r, results = 'hide'}
+col_2_numeric = as.numeric(col_2)
+col_3_numeric = as.numeric(col_3)
+col_4_numeric = as.numeric(col_4)
+```
+After converting variables from one type to another, I find that the logical variables become 0 and 1 because of the binary characteristic, which explains that the mean of this variable is 0.4 because there are four "1" in 10 numbers. The character what i create is 10 length but it is all empty. Then using as.numeric, the results are 10 NA. When a factor is converted into a numeric vector, the numeric codes corresponding to the factor levels will be returned. 
