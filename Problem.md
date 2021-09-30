@@ -9,6 +9,7 @@ Yu Si
 
 ``` r
 set.seed(1234)
+#Create the data frame
 problem_df = tibble(
   x = rnorm(10),
   vec_logical = c(FALSE, FALSE, TRUE, FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE),
@@ -33,6 +34,7 @@ problem_df
     ## 10 -0.890 FALSE       ""       Level2
 
 ``` r
+#pull the variable out of data frame
 col_1 = pull(problem_df, var=1)
 col_2 = pull(problem_df, var=2)
 col_3 = pull(problem_df, var=3)
@@ -61,3 +63,35 @@ col_4
 
     ##  [1] Level1 Level2 Level3 Level1 Level2 Level3 Level1 Level2 Level3 Level2
     ## Levels: Level1 Level2 Level3
+
+``` r
+#calculate the mean of each variable
+mean(col_1)
+```
+
+    ## [1] -0.3831574
+
+``` r
+mean(col_2)
+```
+
+    ## [1] 0.4
+
+``` r
+mean(col_3)
+```
+
+    ## Warning in mean.default(col_3): argument is not numeric or logical: returning NA
+
+    ## [1] NA
+
+``` r
+mean(col_4)
+```
+
+    ## Warning in mean.default(col_4): argument is not numeric or logical: returning NA
+
+    ## [1] NA
+
+Based on the results, the numeric and logical variables work and others
+don’t work for calculating mean.
