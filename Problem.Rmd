@@ -49,3 +49,18 @@ col_3_numeric = as.numeric(col_3)
 col_4_numeric = as.numeric(col_4)
 ```
 After converting variables from one type to another, I find that the logical variables become 0 and 1 because of the binary characteristic, which explains that the mean of this variable is 0.4 because there are four "1" in 10 numbers. The character what i create is 10 length but it is all empty. Then using as.numeric, the results are 10 NA. When a factor is converted into a numeric vector, the numeric codes corresponding to the factor levels will be returned. 
+
+##Problem 2
+```{r}
+data("penguins", package = "palmerpenguins")
+summary(penguins)
+nrow(penguins)
+ncol(penguins)
+flipper_length_mean = mean(penguins$flipper_length_mm, na.rm=TRUE)
+```
+There 344 observation of 8 variables. The variables are species, island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex, year.
+There are three species: Adelie, Chinstrap and Gentoo. There are three islands: Biscoe, Dream, Torgersen. The sex variable contain male and female. The years are 2007, 2008 and 2009. All other variable are number of specific part. 
+There are 344 rows and 8 columns.
+The mean of  flipper length is 200.915204678363.
+
+

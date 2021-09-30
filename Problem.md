@@ -111,3 +111,51 @@ four “1” in 10 numbers. The character what i create is 10 length but it
 is all empty. Then using as.numeric, the results are 10 NA. When a
 factor is converted into a numeric vector, the numeric codes
 corresponding to the factor levels will be returned.
+
+\#\#Problem 2
+
+``` r
+data("penguins", package = "palmerpenguins")
+summary(penguins)
+```
+
+    ##       species          island    bill_length_mm  bill_depth_mm  
+    ##  Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  
+    ##  Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  
+    ##  Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  
+    ##                                  Mean   :43.92   Mean   :17.15  
+    ##                                  3rd Qu.:48.50   3rd Qu.:18.70  
+    ##                                  Max.   :59.60   Max.   :21.50  
+    ##                                  NA's   :2       NA's   :2      
+    ##  flipper_length_mm  body_mass_g       sex           year     
+    ##  Min.   :172.0     Min.   :2700   female:165   Min.   :2007  
+    ##  1st Qu.:190.0     1st Qu.:3550   male  :168   1st Qu.:2007  
+    ##  Median :197.0     Median :4050   NA's  : 11   Median :2008  
+    ##  Mean   :200.9     Mean   :4202                Mean   :2008  
+    ##  3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  
+    ##  Max.   :231.0     Max.   :6300                Max.   :2009  
+    ##  NA's   :2         NA's   :2
+
+``` r
+nrow(penguins)
+```
+
+    ## [1] 344
+
+``` r
+ncol(penguins)
+```
+
+    ## [1] 8
+
+``` r
+flipper_length_mean = mean(penguins$flipper_length_mm, na.rm=TRUE)
+```
+
+There 344 observation of 8 variables. The variables are species, island,
+bill\_length\_mm, bill\_depth\_mm, flipper\_length\_mm, body\_mass\_g,
+sex, year. There are three species: Adelie, Chinstrap and Gentoo. There
+are three islands: Biscoe, Dream, Torgersen. The sex variable contain
+male and female. The years are 2007, 2008 and 2009. All other variable
+are number of specific part. There are 344 rows and 8 columns. The mean
+of flipper length is 200.915204678363.
