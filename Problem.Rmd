@@ -21,6 +21,14 @@ problem_df = tibble(
   vec_char =  character(10),
   vec_factor = factor(c("Level1", "Level2", "Level3","Level1", "Level2", "Level3","Level1", "Level2", "Level3","Level2"))
   )
-
+problem_df
+col_1 = pull(problem_df, var=1)
+col_2 = pull(problem_df, var=2)
+col_3 = pull(problem_df, var=3)
+col_4 = pull(problem_df, var=4)
+col_1
+col_2
+col_3
+col_4
 ```
 
