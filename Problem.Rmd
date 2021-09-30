@@ -63,4 +63,16 @@ There are three species: Adelie, Chinstrap and Gentoo. There are three islands: 
 There are 344 rows and 8 columns.
 The mean of  flipper length is 200.915204678363.
 
+```{r}
+penguins_plot = select(penguins, flipper_length_mm, bill_length_mm)
+ggplot(data = penguins,
+       aes(x = flipper_length_mm,
+           y = bill_length_mm)) + 
+  geom_point()
+ggplot(data = penguins,
+       aes(x = flipper_length_mm,
+           y = bill_length_mm)) + 
+  geom_point(aes(color = species))
+
+```
 

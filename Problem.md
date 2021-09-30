@@ -159,3 +159,26 @@ are three islands: Biscoe, Dream, Torgersen. The sex variable contain
 male and female. The years are 2007, 2008 and 2009. All other variable
 are number of specific part. There are 344 rows and 8 columns. The mean
 of flipper length is 200.915204678363.
+
+``` r
+penguins_plot = select(penguins, flipper_length_mm, bill_length_mm)
+ggplot(data = penguins,
+       aes(x = flipper_length_mm,
+           y = bill_length_mm)) + 
+  geom_point()
+```
+
+    ## Warning: Removed 2 rows containing missing values (geom_point).
+
+![](Problem_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+``` r
+ggplot(data = penguins,
+       aes(x = flipper_length_mm,
+           y = bill_length_mm)) + 
+  geom_point(aes(color = species))
+```
+
+    ## Warning: Removed 2 rows containing missing values (geom_point).
+
+![](Problem_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
